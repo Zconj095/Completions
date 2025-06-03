@@ -1,0 +1,22 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Test
+    jobs:
+      - job: UnitTests
+  
+  - stage: Deploy
+    dependsOn: Test 
+    jobs:
+      - job: Deploy
+        steps:
+          - task: Kubernetes@1
+            inputs:
+              connectionType: 'Kubernetes Service Connection'
+              namespace: 'default'
+              command: 'apply'
+              arguments: '-f deployment.yaml'

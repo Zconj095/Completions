@@ -1,0 +1,270 @@
+using UnityEngine;
+using System.Collections;
+
+/// <summary>
+/// A class that represents a clock with a digital display.
+/// </summary>
+public class ClockDigital : MonoBehaviour
+{
+  private Text textClock;
+
+  /// <summary>
+  /// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
+  /// </summary>
+  void Start()
+  {
+    textClock = GetComponent<Text>();
+  }
+
+  /// <summary>
+  /// Update is called every frame, if the MonoBehaviour is enabled.
+  /// </summary>
+  void Update()
+  {
+    DateTime time = DateTime.Now;
+    string hour = LeadingZero(time.Hour);
+    string minute = LeadingZero(time.Minute);
+    string second = LeadingZero(time.Second);
+
+    textClock.text = hour + ":" + minute + ":" + second;
+  }
+
+  /// <summary>
+  /// Adds a leading zero to an integer if it is less than 10.
+  /// </summary>
+  /// <param name="n">The integer to add a leading zero to.</param>
+  /// <returns>The integer with a leading zero if it is less than 10, or the original integer if it is greater than or equal to 10.</returns>
+  string LeadingZero(int n)
+  {
+    return n.ToString().PadLeft(2, '0');
+  }
+}
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using System;
+
+/// <summary>
+/// A class that represents a countdown timer with a digital display.
+/// </summary>
+public class DigitalCountdown : MonoBehaviour
+{
+  private Text textClock;
+
+  /// <summary>
+  /// The duration of the countdown timer in seconds.
+  /// </summary>
+  private float countdownTimerDuration;
+
+  /// <summary>
+  /// The time at which the countdown timer started.
+  /// </summary>
+  private float countdownTimerStartTime;
+
+  /// <summary>
+  /// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
+  /// </summary>
+  void Start()
+  {
+    textClock = GetComponent<Text>();
+    CountdownTimerReset(30);
+  }
+
+  /// <summary>
+  /// Update is called every frame, if the MonoBehaviour is enabled.
+  /// </summary>
+  void Update()
+  {
+    // default - timer finished
+    string timerMessage = "countdown has finished";
+    int timeLeft = (int)CountdownTimerSecondsRemaining();
+
+    if (timeLeft > 0)
+    {
+      timerMessage = "Countdown seconds remaining = " + LeadingZero(timeLeft);
+    }
+
+    textClock.text = timerMessage;
+  }
+
+  /// <summary>
+  /// Resets the countdown timer to a new duration.
+  /// </summary>
+  /// <param name="delayInSeconds">The duration of the countdown timer in seconds.</param>
+  public void CountdownTimerReset(float delayInSeconds)
+  {
+    countdownTimerDuration = delayInSeconds;
+    countdownTimerStartTime = Time.time;
+  }
+
+  /// <summary>
+  /// Returns the number of seconds remaining in the countdown timer.
+  /// </summary>
+  /// <returns>The number of seconds remaining in the countdown timer.</returns>
+  public float CountdownTimerSecondsRemaining()
+  {
+    float elapsedSeconds = Time.time - countdownTimerStartTime;
+    float timeLeft = countdownTimerDuration - elapsedSeconds;
+    return timeLeft;
+  }
+
+  /// <summary>
+  /// Adds a leading zero to an integer if it is less than 10.
+  /// </summary>
+  /// <param name="n">The integer to add a leading zero to.</param>
+  /// <returns>The integer with a leading zero if it is less than 10, or the original integer if it is greater than or equal to 10.</returns>
+  string LeadingZero(int n)
+  {
+    return n.ToString().PadLeft(2, '0');
+  }
+}
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+/// <summary>
+/// A class that fades a UI element away after a specified duration.
+/// </summary>
+public class FadeAway : MonoBehaviour
+{
+  private CountdownTimer countdownTimer;
+  private Text textUI;
+  private int fadeDuration = 5;
+  private bool fading = false;
+
+  /// <summary>
+  /// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
+  /// </summary>
+  void Start()
+  {
+    textUI = GetComponent<Text>();
+    countdownTimer = GetComponent<CountdownTimer>();
+
+    StartFading(fadeDuration);
+  }
+
+  /// <summary>
+  /// Update is called every frame, if the MonoBehaviour is enabled.
+  /// </summary>
+  void Update()
+  {
+    if (fading)
+    {
+      float alphaRemaining = countdownTimer.GetProportionTimeRemaining();
+      Color c = textUI.material.color;
+      c.a = alphaRemaining;
+      textUI.material.color = c;
+
+      // stop fading when very small number
+      if (alphaRemaining < 0.01)
+      {
+        fading = false;
+      }
+    }
+  }
+
+  /// <summary>
+  /// Starts the fading process for the specified duration.
+  /// </summary>
+  /// <param name="timerTotal">The duration of the fading process in seconds.</param>
+  public void StartFading(int timerTotal)
+  {
+    countdownTimer.ResetTimer(timerTotal);
+    fading = true;
+  }
+}
+
+using UnityEngine;
+using System.Collections;
+
+/// <summary>
+/// A class that scrolls a game object along the Z axis at a specified speed.
+/// </summary>
+public class ScrollZ : MonoBehaviour
+{
+  /// <summary>
+  /// The speed at which the game object should scroll along the Z axis.
+  /// </summary>
+  public float scrollSpeed = 20;
+
+  /// <summary>
+  /// Update is called every frame, if the MonoBehaviour is enabled.
+  /// </summary>
+  void Update()
+  {
+    Vector3 pos = transform.position;
+    Vector3 localVectorUp = transform.TransformDirection(0, 1, 0);
+    pos += localVectorUp * scrollSpeed * Time.deltaTime;
+    transform.position = pos;
+  }
+}
+
+using UnityEngine;
+using System.Collections;
+
+/// <summary>
+/// A class that responds to menu actions by loading specific scenes.
+/// </summary>
+public class MenuActions : MonoBehaviour
+{
+  /// <summary>
+  /// Loads a specific scene based on the scene name.
+  /// </summary>
+  /// <param name="sceneName">The name of the scene to load.</param>
+  public void MENU_ACTION_GotoPage(string sceneName)
+  {
+    Application.LoadLevel(sceneName);
+  }
+}
+
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+
+/// <summary>
+/// A class that allows an UI element to be moved up or down in the hierarchy.
+/// </summary>
+public class ArrangeActions : MonoBehaviour
+{
+  /// <summary>
+  /// The RectTransform of the UI element.
+  /// </summary>
+  private RectTransform panelRectTransform;
+
+  /// <summary>
+  /// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
+  /// </summary>
+  void Start()
+  {
+    panelRectTransform = GetComponent<RectTransform>();
+  }
+
+  /// <summary>
+  /// Moves the UI element down one position in the hierarchy.
+  /// </summary>
+  public void MoveDownOne()
+  {
+    print("(before change) " + GameObject.name + " sibling index = " + panelRectTransform.GetSiblingIndex());
+
+    int currentSiblingIndex = panelRectTransform.GetSiblingIndex();
+    panelRectTransform.SetSiblingIndex(currentSiblingIndex - 1);
+
+    print("(after change) " + GameObject.name + " sibling index = " + panelRectTransform.GetSiblingIndex());
+  }
+
+  /// <summary>
+  /// Moves the UI element up one position in the hierarchy.
+  /// </summary>
+  public void MoveUpOne()
+  {
+    print("(before change) " + GameObject.name + " sibling index = " + panelRectTransform.GetSiblingIndex());
+
+    int currentSiblingIndex = panelRectTransform.GetSiblingIndex();
+    panelRectTransform.SetSiblingIndex(currentSiblingIndex + 1);
+
+    print("(after change) " + GameObject.name + " sibling index = " + panelRectTransform.GetSiblingIndex());
+  }
+}

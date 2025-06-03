@@ -1,0 +1,2 @@
+100,500,"{'timestamp': 1748964846.6897562, 'value': 500, 'processed': True}",[],"{'heart_rate': 72, 'body_temp': 36.24225660938617}",reset dashboard,"{'cars': 0, 'bikes': 0}"
+31,155,"{'timestamp': 1748964884.8917828, 'value': 155, 'processed': True}",[],"{'heart_rate': 67, 'body_temp': 36.8028570425024}",show fuel status,"{'cars': 0, 'bikes': 0}"

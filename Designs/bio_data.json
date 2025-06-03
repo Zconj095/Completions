@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "066b8d3f954cd5d8f61a0a7fa603c1f5",
+      "name": "John Doe",
+      "age": 35,
+      "gender": "male"
+    }
+  ]
+}

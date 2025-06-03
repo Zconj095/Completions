@@ -1,0 +1,7 @@
+{
+    "red": ["Passionate", "Energetic", "Competitive", "Angry", "Love", "Danger", "Strength", "Warmth", "Excitement", "Power"],
+    "blue": ["Calm", "Trustworthy", "Communicative", "Dependable", "Peaceful", "Serene", "Stable", "Intelligent", "Reflective", "Loyal"],
+    "yellow": ["Optimistic", "Cheerful", "Intellectual", "Curious", "Bright", "Sunny", "Energetic", "Creative", "Hopeful", "Friendly"],
+    "gray": ["Balanced", "Neutral", "Flexible", "Uncommitted", "Conservative", "Elegant", "Professional", "Sombre", "Practical", "Reliable"],
+    "mixed colors": ["Complex", "Multifaceted", "Adaptable", "Diverse", "Innovative", "Dynamic", "Vibrant", "Versatile", "Rich", "Intriguing"]
+}
