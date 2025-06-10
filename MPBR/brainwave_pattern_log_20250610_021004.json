@@ -1,0 +1,319 @@
+{
+  "baseline_stats": {
+    "frequency": {
+      "mean": 9.814661311491717,
+      "std": 2.025509914995346,
+      "count": 100,
+      "timestamp": "2025-06-10T02:10:04.104408"
+    },
+    "amplitude": {
+      "mean": 0.48155581722759094,
+      "std": 0.0927845664102675,
+      "count": 100,
+      "timestamp": "2025-06-10T02:10:04.104408"
+    },
+    "theta_band": {
+      "mean": 6.939041329783035,
+      "std": 0.7122415720261751,
+      "count": 22,
+      "percentage": 22.0
+    },
+    "alpha_band": {
+      "mean": 10.359854303064132,
+      "std": 1.1591003873961505,
+      "count": 72,
+      "percentage": 72.0
+    },
+    "beta_band": {
+      "mean": 13.816285345554553,
+      "std": 0.7041085473863361,
+      "count": 6,
+      "percentage": 6.0
+    }
+  },
+  "pattern_history": [
+    {
+      "timestamp": "2025-06-10T02:10:04.105413",
+      "pattern_type": "normal",
+      "severity": "low",
+      "description": "Normal brainwave activity within baseline parameters"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.105413",
+      "pattern_type": "normal",
+      "severity": "low",
+      "description": "Normal brainwave activity within baseline parameters"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.106918",
+      "pattern_type": "normal",
+      "severity": "low",
+      "description": "Normal brainwave activity within baseline parameters"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.106918",
+      "pattern_type": "high_activity_state",
+      "severity": "medium",
+      "description": "Both frequency and amplitude elevated"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.107924",
+      "pattern_type": "low_activity_state",
+      "severity": "medium",
+      "description": "Both frequency and amplitude suppressed"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.108923",
+      "pattern_type": "extreme_amplitude_deviation",
+      "severity": "high",
+      "description": "Extreme amplitude deviation (z-score: 5.05)"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.109923",
+      "pattern_type": "extreme_frequency_deviation",
+      "severity": "high",
+      "description": "Extreme frequency deviation (z-score: 7.50)"
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.109923",
+      "pattern_type": "extreme_frequency_deviation",
+      "severity": "high",
+      "description": "Extreme frequency deviation (z-score: -4.10)"
+    }
+  ],
+  "pattern_log": [
+    {
+      "timestamp": "2025-06-10T02:10:04.105413",
+      "input_data": {
+        "pulseFrequency": 9.5,
+        "pulseAmplitude": 0.48
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.105413",
+        "raw_data": {
+          "pulseFrequency": 9.5,
+          "pulseAmplitude": 0.48
+        },
+        "frequency_z_score": -0.15534918351285382,
+        "frequency_anomaly": "False",
+        "amplitude_z_score": -0.016768060549117305,
+        "amplitude_anomaly": "False",
+        "alpha_band_z_score": -0.7418290187925339,
+        "alpha_band_anomaly": "False",
+        "overall_anomaly": false,
+        "anomaly_count": "0"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.105413",
+        "pattern_type": "normal",
+        "severity": "low",
+        "description": "Normal brainwave activity within baseline parameters"
+      },
+      "baseline_age_minutes": 1.675e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.105413",
+      "input_data": {
+        "pulseFrequency": 10.2,
+        "pulseAmplitude": 0.52
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.105413",
+        "raw_data": {
+          "pulseFrequency": 10.2,
+          "pulseAmplitude": 0.52
+        },
+        "frequency_z_score": 0.1902428053575673,
+        "frequency_anomaly": "False",
+        "amplitude_z_score": 0.41433811957928013,
+        "amplitude_anomaly": "False",
+        "alpha_band_z_score": -0.13791238860961488,
+        "alpha_band_anomaly": "False",
+        "overall_anomaly": false,
+        "anomaly_count": "0"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.105413",
+        "pattern_type": "normal",
+        "severity": "low",
+        "description": "Normal brainwave activity within baseline parameters"
+      },
+      "baseline_age_minutes": 1.675e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.106918",
+      "input_data": {
+        "pulseFrequency": 11.0,
+        "pulseAmplitude": 0.45
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.106918",
+        "raw_data": {
+          "pulseFrequency": 11.0,
+          "pulseAmplitude": 0.45
+        },
+        "frequency_z_score": 0.585205078352335,
+        "frequency_anomaly": "False",
+        "amplitude_z_score": -0.3400976956454148,
+        "amplitude_anomaly": "False",
+        "alpha_band_z_score": 0.5522780458851512,
+        "alpha_band_anomaly": "False",
+        "overall_anomaly": false,
+        "anomaly_count": "0"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.106918",
+        "pattern_type": "normal",
+        "severity": "low",
+        "description": "Normal brainwave activity within baseline parameters"
+      },
+      "baseline_age_minutes": 4.183333333333333e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.106918",
+      "input_data": {
+        "pulseFrequency": 15.5,
+        "pulseAmplitude": 0.75
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.106918",
+        "raw_data": {
+          "pulseFrequency": 15.5,
+          "pulseAmplitude": 0.75
+        },
+        "frequency_z_score": 2.8068678639479017,
+        "frequency_anomaly": "True",
+        "amplitude_z_score": 2.8931986553175633,
+        "amplitude_anomaly": "True",
+        "beta_band_z_score": 2.391271432075959,
+        "beta_band_anomaly": "True",
+        "overall_anomaly": true,
+        "anomaly_count": "2"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.106918",
+        "pattern_type": "high_activity_state",
+        "severity": "medium",
+        "description": "Both frequency and amplitude elevated"
+      },
+      "baseline_age_minutes": 4.183333333333333e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.107924",
+      "input_data": {
+        "pulseFrequency": 5.2,
+        "pulseAmplitude": 0.25
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.107924",
+        "raw_data": {
+          "pulseFrequency": 5.2,
+          "pulseAmplitude": 0.25
+        },
+        "frequency_z_score": -2.2782714008597282,
+        "frequency_anomaly": "True",
+        "amplitude_z_score": -2.4956285962874003,
+        "amplitude_anomaly": "True",
+        "theta_band_z_score": -2.4416453603456953,
+        "theta_band_anomaly": "True",
+        "overall_anomaly": true,
+        "anomaly_count": "2"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.107924",
+        "pattern_type": "low_activity_state",
+        "severity": "medium",
+        "description": "Both frequency and amplitude suppressed"
+      },
+      "baseline_age_minutes": 5.86e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.108923",
+      "input_data": {
+        "pulseFrequency": 8.8,
+        "pulseAmplitude": 0.95
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.108923",
+        "raw_data": {
+          "pulseFrequency": 8.8,
+          "pulseAmplitude": 0.95
+        },
+        "frequency_z_score": -0.500941172383275,
+        "frequency_anomaly": "False",
+        "amplitude_z_score": 5.0487295559595475,
+        "amplitude_anomaly": "True",
+        "alpha_band_z_score": -1.3457456489754531,
+        "alpha_band_anomaly": "False",
+        "overall_anomaly": true,
+        "anomaly_count": "1"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.108923",
+        "pattern_type": "extreme_amplitude_deviation",
+        "severity": "high",
+        "description": "Extreme amplitude deviation (z-score: 5.05)"
+      },
+      "baseline_age_minutes": 7.525e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.109923",
+      "input_data": {
+        "pulseFrequency": 25.0,
+        "pulseAmplitude": 0.15
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.109923",
+        "raw_data": {
+          "pulseFrequency": 25.0,
+          "pulseAmplitude": 0.15
+        },
+        "frequency_z_score": 7.497044855760764,
+        "frequency_anomaly": "True",
+        "amplitude_z_score": -3.573394046608393,
+        "amplitude_anomaly": "True",
+        "beta_band_z_score": 15.883509291230169,
+        "beta_band_anomaly": "True",
+        "overall_anomaly": true,
+        "anomaly_count": "2"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.109923",
+        "pattern_type": "extreme_frequency_deviation",
+        "severity": "high",
+        "description": "Extreme frequency deviation (z-score: 7.50)"
+      },
+      "baseline_age_minutes": 9.191666666666666e-05
+    },
+    {
+      "timestamp": "2025-06-10T02:10:04.109923",
+      "input_data": {
+        "pulseFrequency": 1.5,
+        "pulseAmplitude": 0.85
+      },
+      "z_scores": {
+        "timestamp": "2025-06-10T02:10:04.109923",
+        "raw_data": {
+          "pulseFrequency": 1.5,
+          "pulseAmplitude": 0.85
+        },
+        "frequency_z_score": -4.104971913460528,
+        "frequency_anomaly": "True",
+        "amplitude_z_score": 3.9709641056385556,
+        "amplitude_anomaly": "True",
+        "overall_anomaly": true,
+        "anomaly_count": "2"
+      },
+      "pattern_analysis": {
+        "timestamp": "2025-06-10T02:10:04.109923",
+        "pattern_type": "extreme_frequency_deviation",
+        "severity": "high",
+        "description": "Extreme frequency deviation (z-score: -4.10)"
+      },
+      "baseline_age_minutes": 9.191666666666666e-05
+    }
+  ],
+  "export_timestamp": "2025-06-10T02:10:04.111923",
+  "total_patterns": 8,
+  "z_score_threshold": 2.0
+}

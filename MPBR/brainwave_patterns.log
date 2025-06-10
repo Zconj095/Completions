@@ -1,0 +1,14 @@
+2025-06-10 00:46:33,768 - BrainwaveAnalyzer - INFO - Baseline established with 100 frequency samples
+2025-06-10 00:46:33,771 - BrainwaveAnalyzer - WARNING - Significant pattern detected: high_activity_state (Severity: medium) - Both frequency and amplitude elevated
+2025-06-10 00:46:33,771 - BrainwaveAnalyzer - WARNING - Significant pattern detected: low_activity_state (Severity: medium) - Both frequency and amplitude suppressed
+2025-06-10 00:46:33,772 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_amplitude_deviation (Severity: high) - Extreme amplitude deviation (z-score: 5.07)
+2025-06-10 00:46:33,773 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_frequency_deviation (Severity: high) - Extreme frequency deviation (z-score: 7.71)
+2025-06-10 00:46:33,773 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_frequency_deviation (Severity: high) - Extreme frequency deviation (z-score: -4.24)
+2025-06-10 00:46:33,778 - BrainwaveAnalyzer - INFO - Pattern log exported to brainwave_pattern_log_20250610_004633.json
+2025-06-10 02:10:04,104 - BrainwaveAnalyzer - INFO - Baseline established with 100 frequency samples
+2025-06-10 02:10:04,106 - BrainwaveAnalyzer - WARNING - Significant pattern detected: high_activity_state (Severity: medium) - Both frequency and amplitude elevated
+2025-06-10 02:10:04,107 - BrainwaveAnalyzer - WARNING - Significant pattern detected: low_activity_state (Severity: medium) - Both frequency and amplitude suppressed
+2025-06-10 02:10:04,108 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_amplitude_deviation (Severity: high) - Extreme amplitude deviation (z-score: 5.05)
+2025-06-10 02:10:04,109 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_frequency_deviation (Severity: high) - Extreme frequency deviation (z-score: 7.50)
+2025-06-10 02:10:04,109 - BrainwaveAnalyzer - WARNING - Significant pattern detected: extreme_frequency_deviation (Severity: high) - Extreme frequency deviation (z-score: -4.10)
+2025-06-10 02:10:04,115 - BrainwaveAnalyzer - INFO - Pattern log exported to brainwave_pattern_log_20250610_021004.json

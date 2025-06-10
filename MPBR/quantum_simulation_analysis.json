@@ -1,0 +1,33 @@
+{
+  "simulation_metadata": {
+    "qubits": 3,
+    "iterations": 100,
+    "shots_per_iteration": 2048,
+    "spatial_sectors": 16,
+    "cache_duration": 5.0,
+    "total_runtime_data_points": 100
+  },
+  "final_analysis": {
+    "raw_entropy": 2.995718970498701,
+    "temporal_entropy": 2.9987189305093276,
+    "spatial_entropy": 3.006828483091594,
+    "spatiotemporal_entropy": 3.0034720208111674,
+    "final_weights": [
+      0.5,
+      0.5
+    ],
+    "chaos_metrics": {
+      "avg_lyapunov": 0.41060166247870655,
+      "avg_dimension": 2.355622045051198,
+      "avg_entropy_rate": 1.1785695447704774
+    },
+    "performance_metrics": {
+      "cache_efficiency": 10.0,
+      "transformation_intensity_stats": {
+        "min": 1.0798194920495998,
+        "max": 1.7588723005828293,
+        "avg": 1.4703434158349666
+      }
+    }
+  }
+}
